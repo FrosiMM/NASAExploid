@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Астероїди — NASA Space Explorer</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Exo+2:wght@300;400;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <div id="stars-bg"></div>
+
+  <header class="site-header">
+    <div class="logo">
+      <a href="index.html" style="text-decoration:none;display:flex;align-items:center;gap:10px;">
+        <span class="logo-icon">🛸</span>
+        <span class="logo-text">NASA<span class="logo-accent">Explorer</span></span>
+      </a>
+    </div>
+    <nav class="main-nav">
+      <a href="index.html" class="nav-link">Головна</a>
+      <a href="mars.html" class="nav-link">Марс</a>
+      <a href="moon.html" class="nav-link">Місяць</a>
+      <a href="asteroids.html" class="nav-link active">Астероїди</a>
+      <a href="team.html" class="nav-link">Учасники</a>
+    </nav>
+    <div class="nav-date" id="nav-date"></div>
+  </header>
+
+  <section class="page-hero page-hero-asteroid">
+    <div class="page-hero-content">
+      <span class="page-hero-emoji">☄️</span>
+      <h1 class="page-hero-title">Близькі астероїди</h1>
+      <p class="page-hero-sub">Об'єкти, що наближаються до Землі сьогодні за даними NASA NeoWs</p>
+    </div>
+    <div class="page-hero-orb asteroid-orb"></div>
+  </section>
+
+  <section class="asteroid-section">
+    <div class="asteroid-summary" id="asteroid-summary">
+      <div class="loader">Завантаження даних NASA...</div>
+    </div>
+
+    <div class="danger-indicator" id="danger-indicator"></div>
+
+    <div class="asteroid-list" id="asteroid-list"></div>
+  </section>
+
+  <footer class="site-footer">
+    <p>Дані надані <a href="https://api.nasa.gov" target="_blank">NASA Open APIs</a> · Навчальний проект · 11 клас · Шаповала Т. · Яковчука Н. · Кордана І.</p>
+  </footer>
+
+  <script src="stars.js"></script>
+  <script src="asteroids.js"></script>
+  <script>
+    document.getElementById("nav-date").textContent = new Date().toLocaleDateString("uk-UA", {
+      day: "numeric", month: "long", year: "numeric"
+    });
+  </script>
+
+</body>
+</html>

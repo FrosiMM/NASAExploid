@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NASA Space Explorer</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Exo+2:wght@300;400;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <div id="stars-bg"></div>
+
+  <header class="site-header">
+    <div class="logo">
+      <span class="logo-icon">🛸</span>
+      <span class="logo-text">NASA<span class="logo-accent">Explorer</span></span>
+    </div>
+    <nav class="main-nav">
+      <a href="index.html" class="nav-link active">Головна</a>
+      <a href="mars.html" class="nav-link">Марс</a>
+      <a href="moon.html" class="nav-link">Місяць</a>
+      <a href="asteroids.html" class="nav-link">Астероїди</a>
+      <a href="team.html" class="nav-link">Учасники</a>
+    </nav>
+    <div class="nav-date" id="nav-date"></div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <div class="hero-badge">NASA Open API</div>
+      <h1 class="hero-title">
+        Досліджуй<br/>
+        <span class="hero-title-accent">Всесвіт</span>
+      </h1>
+      <p class="hero-subtitle">
+        Реальні дані та знімки з космічних місій NASA у тебе в браузері
+      </p>
+      <div class="hero-buttons">
+        <a href="mars.html" class="btn btn-primary">Почати подорож</a>
+        <a href="asteroids.html" class="btn btn-ghost">Небезпечні об'єкти</a>
+      </div>
+    </div>
+    <div class="hero-planet"></div>
+    <div class="hero-ring"></div>
+  </section>
+
+  <section class="cards-section">
+    <h2 class="section-title">Розділи</h2>
+    <div class="cards-grid">
+
+      <a href="mars.html" class="card card-mars">
+        <div class="card-glow"></div>
+        <div class="card-icon">🔴</div>
+        <h3 class="card-title">Фото з Марсу</h3>
+        <p class="card-desc">Знімки, зроблені марсоходами Curiosity та Perseverance прямо на поверхні Червоної планети</p>
+        <span class="card-arrow">→</span>
+      </a>
+
+      <a href="moon.html" class="card card-moon">
+        <div class="card-glow"></div>
+        <div class="card-icon">🌕</div>
+        <h3 class="card-title">Фаза Місяця</h3>
+        <p class="card-desc">Поточна фаза Місяця, точна дата сходу та заходу, інформація про наступне повня</p>
+        <span class="card-arrow">→</span>
+      </a>
+
+      <a href="asteroids.html" class="card card-asteroid">
+        <div class="card-glow"></div>
+        <div class="card-icon">☄️</div>
+        <h3 class="card-title">Близькі астероїди</h3>
+        <p class="card-desc">Список астероїдів, які наближаються до Землі сьогодні — чи є небезпечні серед них?</p>
+        <span class="card-arrow">→</span>
+      </a>
+
+    </div>
+  </section>
+
+  <section class="apod-section">
+    <h2 class="section-title">Фото дня від NASA</h2>
+    <div class="apod-container" id="apod-container">
+      <div class="loader">Завантаження...</div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <p>Дані надані <a href="https://api.nasa.gov" target="_blank">NASA Open APIs</a> · Навчальний проект · 11 клас · Шаповала Т. · Яковчука Н. · Кордана І.</p>
+  </footer>
+
+  <script src="stars.js"></script>
+  <script src="apod.js"></script>
+  <script>
+    document.getElementById("nav-date").textContent = new Date().toLocaleDateString("uk-UA", {
+      day: "numeric", month: "long", year: "numeric"
+    });
+  </script>
+
+</body>
+</html>

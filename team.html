@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Команда — NASA Space Explorer</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="team.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Exo+2:wght@300;400;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <div id="stars-bg"></div>
+
+  <header class="site-header">
+    <div class="logo">
+      <a href="index.html" style="text-decoration:none;display:flex;align-items:center;gap:10px;">
+        <span class="logo-icon">🛸</span>
+        <span class="logo-text">NASA<span class="logo-accent">Explorer</span></span>
+      </a>
+    </div>
+    <nav class="main-nav">
+      <a href="index.html" class="nav-link">Головна</a>
+      <a href="mars.html" class="nav-link">Марс</a>
+      <a href="moon.html" class="nav-link">Місяць</a>
+      <a href="asteroids.html" class="nav-link">Астероїди</a>
+      <a href="team.html" class="nav-link">Учасники</a>
+    </nav>
+    <div class="nav-date" id="nav-date"></div>
+  </header>
+
+  <section class="page-hero page-hero-team">
+    <div class="page-hero-content">
+      <span class="page-hero-emoji">👨‍🚀</span>
+      <h1 class="page-hero-title">Наша команда</h1>
+      <p class="page-hero-sub">Учні 11 класу, які створили цей проект у рамках тематичної роботи з інформатики</p>
+    </div>
+    <div class="page-hero-orb team-orb"></div>
+  </section>
+
+  <section class="project-info-section">
+    <div class="project-info-box">
+      <div class="project-info-item">
+        <div class="project-info-icon">📅</div>
+        <div class="project-info-label">Рік</div>
+        <div class="project-info-value" id="current-year"></div>
+      </div>
+      <div class="project-info-item">
+        <div class="project-info-icon">🏫</div>
+        <div class="project-info-label">Предмет</div>
+        <div class="project-info-value">Інформатика</div>
+      </div>
+      <div class="project-info-item">
+        <div class="project-info-icon">📚</div>
+        <div class="project-info-label">Клас</div>
+        <div class="project-info-value">11</div>
+      </div>
+      <div class="project-info-item">
+        <div class="project-info-icon">🌐</div>
+        <div class="project-info-label">Технології</div>
+        <div class="project-info-value">HTML · CSS · JS</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="team-section">
+    <h2 class="section-title">Учасники проекту</h2>
+
+    <div class="team-grid">
+
+      <!-- УЧАСНИК 1 — заповни сам -->
+      <div class="team-card" style="animation-delay: 0s">
+        <div class="team-card-number">01</div>
+        <div class="team-avatar">
+          <span class="team-avatar-emoji">🧑‍💻</span>
+        </div>
+        <div class="team-card-body">
+          <h3 class="team-name">Шаповал Тимофій</h3>
+          <div class="team-role">Головний розробник</div>
+          <p class="team-desc">
+            Відповідав за JavaScript-логіку, підключення
+            NASA API, обробку даних та інтерактивність на сторінках, 
+            а також за взаємодію між різними розділами сайту і структуру проекту, 
+            брав участь також у дизайні та загальній концепції сайту, допомагав
+            з організацією роботи команди та розподілом завдань.
+          </p>
+          <div class="team-tasks">
+            <div class="team-task-tag">JavaScript</div>
+            <div class="team-task-tag">NASA API</div>
+            <div class="team-task-tag">Взаємодія між файлами</div>
+            <div class="team-task-tag">CSS</div>
+            <div class="team-task-tag">HTML</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- УЧАСНИК 2 — заповни сам -->
+      <div class="team-card" style="animation-delay: 0.15s">
+        <div class="team-card-number">02</div>
+        <div class="team-avatar">
+          <span class="team-avatar-emoji">🧑‍🎨</span>
+        </div>
+        <div class="team-card-body">
+          <h3 class="team-name">Яковчука Назар</h3>
+          <div class="team-role">Дизайнер та розробник інтерфейсу</div>
+          <p class="team-desc">
+            Стилізував сайт,
+            створював анімації та візуальні ефекти 
+            за допомогою CSS,
+          </p>
+          <div class="team-tasks">
+            <div class="team-task-tag">CSS</div>
+            <div class="team-task-tag">Анімації</div>
+            <div class="team-task-tag">Візуальні ефекти</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- УЧАСНИК 3 — заповни сам -->
+      <div class="team-card" style="animation-delay: 0.3s">
+        <div class="team-card-number">03</div>
+        <div class="team-avatar">
+          <span class="team-avatar-emoji">🧑‍🔬</span>
+        </div>
+        <div class="team-card-body">
+          <h3 class="team-name">Кордан Ілля</h3>
+          <div class="team-role">Структура Html</div>
+          <p class="team-desc">
+            Відповідав за структуру HTML-сторінок, організацію контенту та забезпечення семантичної розмітки, 
+            а також за зв'язок між різними розділами сайту та загальну логіку навігації.
+          </p>
+          <div class="team-tasks">
+            <div class="team-task-tag">HTML</div>
+            <div class="team-task-tag">Семантична розмітка</div>
+            <div class="team-task-tag">Навігація</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="used-tech-section">
+    <h2 class="section-title">Що використовували в проекті</h2>
+    <div class="tech-grid">
+      <div class="tech-item">
+        <div class="tech-icon">🌐</div>
+        <div class="tech-name">HTML5</div>
+        <div class="tech-desc">Структура сторінок</div>
+      </div>
+      <div class="tech-item">
+        <div class="tech-icon">🎨</div>
+        <div class="tech-name">CSS3</div>
+        <div class="tech-desc">Стилі та анімації</div>
+      </div>
+      <div class="tech-item">
+        <div class="tech-icon">⚡</div>
+        <div class="tech-name">JavaScript</div>
+        <div class="tech-desc">Логіка та API-запити</div>
+      </div>
+      <div class="tech-item">
+        <div class="tech-icon">🛸</div>
+        <div class="tech-name">NASA API</div>
+        <div class="tech-desc">Реальні космічні дані</div>
+      </div>
+      <div class="tech-item">
+        <div class="tech-icon">🔤</div>
+        <div class="tech-name">Google Fonts</div>
+        <div class="tech-desc">Шрифти Orbitron, Exo 2</div>
+      </div>
+      <div class="tech-item">
+        <div class="tech-icon">📡</div>
+        <div class="tech-name">Fetch API</div>
+        <div class="tech-desc">Асинхронні запити</div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <p>Дані надані <a href="https://api.nasa.gov" target="_blank">NASA Open APIs</a> · Навчальний проект · 11 клас · Шаповала Т. · Яковчука Н. · Кордана І.</p>
+  </footer>
+
+  <script src="stars.js"></script>
+  <script>
+    document.getElementById("nav-date").textContent = new Date().toLocaleDateString("uk-UA", {
+      day: "numeric", month: "long", year: "numeric"
+    });
+    document.getElementById("current-year").textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>

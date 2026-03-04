@@ -1,0 +1,229 @@
+.page-hero-team .page-hero-title {
+  color: var(--accent2);
+}
+
+.team-orb {
+  background: radial-gradient(circle at 35% 35%, #00d4aa, #007a60, #002a20);
+  box-shadow: 0 0 80px rgba(0, 212, 170, 0.3);
+}
+
+.project-info-section {
+  position: relative;
+  z-index: 1;
+  padding: 0 80px 40px;
+}
+
+.project-info-box {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 32px 48px;
+  display: flex;
+  justify-content: space-around;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.project-info-item {
+  text-align: center;
+  padding: 8px 24px;
+}
+
+.project-info-icon {
+  font-size: 28px;
+  margin-bottom: 8px;
+}
+
+.project-info-label {
+  font-family: var(--font-display);
+  font-size: 9px;
+  letter-spacing: 2px;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+
+.project-info-value {
+  font-family: var(--font-display);
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--accent2);
+}
+
+.team-section {
+  position: relative;
+  z-index: 1;
+  padding: 0 80px 60px;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 28px;
+}
+
+.team-card {
+  position: relative;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 36px;
+  transition: all 0.4s ease;
+  animation: fadeInUp 0.6s ease both;
+  overflow: hidden;
+}
+
+.team-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--accent), var(--accent2));
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.team-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(79, 158, 255, 0.3);
+  box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+}
+
+.team-card:hover::before {
+  opacity: 1;
+}
+
+.team-card-number {
+  position: absolute;
+  top: 24px;
+  right: 28px;
+  font-family: var(--font-display);
+  font-size: 48px;
+  font-weight: 900;
+  color: rgba(79, 158, 255, 0.06);
+  line-height: 1;
+  pointer-events: none;
+}
+
+.team-avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: var(--surface2);
+  border: 2px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  transition: border-color 0.3s ease;
+}
+
+.team-card:hover .team-avatar {
+  border-color: var(--accent);
+}
+
+.team-avatar-emoji {
+  font-size: 36px;
+  line-height: 1;
+}
+
+.team-card-body {
+  flex: 1;
+}
+
+.team-name {
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 6px;
+  letter-spacing: 1px;
+}
+
+.team-role {
+  font-family: var(--font-display);
+  font-size: 10px;
+  letter-spacing: 2px;
+  color: var(--accent);
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.team-desc {
+  font-size: 14px;
+  color: var(--text-muted);
+  line-height: 1.75;
+  margin-bottom: 20px;
+}
+
+.team-tasks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.team-task-tag {
+  font-family: var(--font-display);
+  font-size: 9px;
+  letter-spacing: 1.5px;
+  color: var(--accent2);
+  background: rgba(0, 212, 170, 0.07);
+  border: 1px solid rgba(0, 212, 170, 0.2);
+  border-radius: 30px;
+  padding: 5px 12px;
+}
+
+.used-tech-section {
+  position: relative;
+  z-index: 1;
+  padding: 0 80px 80px;
+}
+
+.tech-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 16px;
+}
+
+.tech-item {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 24px 20px;
+  text-align: center;
+  transition: all 0.3s ease;
+  animation: fadeInUp 0.5s ease both;
+}
+
+.tech-item:hover {
+  border-color: rgba(79, 158, 255, 0.3);
+  background: var(--surface2);
+  transform: translateY(-4px);
+}
+
+.tech-icon {
+  font-size: 32px;
+  margin-bottom: 12px;
+}
+
+.tech-name {
+  font-family: var(--font-display);
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 6px;
+  letter-spacing: 1px;
+}
+
+.tech-desc {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+@media (max-width: 900px) {
+  .project-info-section,
+  .team-section,
+  .used-tech-section { padding-left: 20px; padding-right: 20px; }
+
+  .project-info-box { padding: 24px; }
+}

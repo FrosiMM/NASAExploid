@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Місяць — NASA Space Explorer</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Exo+2:wght@300;400;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <div id="stars-bg"></div>
+
+  <header class="site-header">
+    <div class="logo">
+      <a href="index.html" style="text-decoration:none;display:flex;align-items:center;gap:10px;">
+        <span class="logo-icon">🛸</span>
+        <span class="logo-text">NASA<span class="logo-accent">Explorer</span></span>
+      </a>
+    </div>
+    <nav class="main-nav">
+      <a href="index.html" class="nav-link">Головна</a>
+      <a href="mars.html" class="nav-link">Марс</a>
+      <a href="moon.html" class="nav-link active">Місяць</a>
+      <a href="asteroids.html" class="nav-link">Астероїди</a>
+      <a href="team.html" class="nav-link">Учасники</a>
+    </nav>
+    <div class="nav-date" id="nav-date"></div>
+  </header>
+
+  <section class="page-hero page-hero-moon">
+    <div class="page-hero-content">
+      <span class="page-hero-emoji">🌕</span>
+      <h1 class="page-hero-title">Місяць сьогодні</h1>
+      <p class="page-hero-sub">Поточна фаза, час сходу та заходу, астрономічні дані</p>
+    </div>
+    <div class="page-hero-orb moon-orb"></div>
+  </section>
+
+  <section class="moon-section">
+    <div class="moon-display">
+      <div class="moon-visual" id="moon-visual">
+        <div class="moon-circle" id="moon-circle"></div>
+        <div class="moon-shadow" id="moon-shadow"></div>
+      </div>
+      <div class="moon-info">
+        <div class="moon-phase-name" id="moon-phase-name">Завантаження...</div>
+        <div class="moon-stats-grid" id="moon-stats-grid"></div>
+      </div>
+    </div>
+
+    <div class="moon-calendar-box">
+      <h3 class="box-title">Цикл Місяця</h3>
+      <div class="phase-timeline" id="phase-timeline"></div>
+    </div>
+
+    <div class="moon-facts-box">
+      <h3 class="box-title">Цікаві факти про Місяць</h3>
+      <div class="facts-grid" id="facts-grid"></div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <p>Дані надані <a href="https://api.nasa.gov" target="_blank">NASA Open APIs</a> · Навчальний проект · 11 клас · Шаповала Т. · Яковчука Н. · Кордана І.</p>
+  </footer>
+
+  <script src="stars.js"></script>
+  <script src="moon.js"></script>
+  <script>
+    document.getElementById("nav-date").textContent = new Date().toLocaleDateString("uk-UA", {
+      day: "numeric", month: "long", year: "numeric"
+    });
+  </script>
+
+</body>
+</html>
